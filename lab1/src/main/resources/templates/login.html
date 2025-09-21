@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">Login</title>
+</head>
+<body>
+
+<form th:action="@{/login/form}" method="post">
+    <label>Username</label>
+    <input type="text" name="username" th:value="${username}">
+    <label>Password</label>
+    <input type="password" name="password">
+    <button type="submit">Login</button>
+</form>
+
+
+<div th:if="${message}" th:text="${message}"></div>
+
+
+</body>
+</html>
